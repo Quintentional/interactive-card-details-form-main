@@ -1,51 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
+  <div id="layout">
+    <div id="cards">
+      <div id="card-front" class="card">
+        <svg id="card-logo" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+          <path
+            d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+            stroke="#fff" />
+        </svg>
+        <p id="card-number">0000 0000 0000 0000</p>
+        <div id="name-expiration">
+          <p id="card-name">Jane Appleseed</p>
+          <p id="expiration-date">00/00</p>
+        </div>
+      </div>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+      <div id="card-back" class="card">
+        <p id="security-code">000</p>
+      </div>
+    </div>
 
-  000
+    <form action="#">
+      <div id="name-div">
+        <label for="name" id="name-label">Cardholder Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" />
+        <p id="name-blank" class="blank error">Can't be blank</p>
+      </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+      <div id="number-div">
+        <label for="number" id="number-label">Card Number</label>
+        <input type="text" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000" />
+        <p id="number-blank" class="blank error">Can't be blank</p>
+        <p id="number-format" class="format error">
+          Wrong format, numbers only
+        </p>
+      </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+      <div id="expiration-cvc">
+        <div id="expiration-div">
+          <div id="expiration-flex">
+            <div id="expiration-month-flex">
+              <label for="expiration-month" id="expiration-month-label">Exp. Date (MM/YY)</label>
+              <input type="text" id="expiration-month" name="expiration-month" placeholder="MM" />
+            </div>
+            <div id="expiration-year-flex">
+              <label for="expiration-year" id="expiration-year-label">Expiration Year</label>
+              <input type="text" id="expiration-year" name="expiration-year" placeholder="YY" />
+            </div>
+          </div>
+          <div id="expiration-errors">
+            <p id="expiration-blank" class="blank error">Can't be blank</p>
+            <p id="expiration-format" class="expiration error">
+              Wrong format, numbers only
+            </p>
+          </div>
+        </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <div id="cvc-flex">
+          <label for="cvc" id="cvc-label">CVC</label>
+          <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" />
+          <p id="cvc-blank" class="blank error">Can't be blank</p>
+          <p id="cvc-format" class="cvc error">Wrong format, numbers only</p>
+        </div>
+      </div>
 
-  CVC
-  e.g. 123
+      <button id="confirm">Confirm</button>
+    </form>
 
-  Confirm
+    <!-- Completed state start -->
 
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div id="completed">
+      <svg id="complete-icon" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="40" fill="url(#a)" />
+        <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+        <defs>
+          <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#6348FE" />
+            <stop offset="1" stop-color="#610595" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <h1>Thank you!</h1>
+      <p id="complete-p">We've added your card details</p>
+      <button id="continue">Continue</button>
+    </div>
   </div>
+
+  <script src="index.js"></script>
 </body>
+
 </html>

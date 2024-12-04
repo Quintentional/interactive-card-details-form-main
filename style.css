@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(270, 3%, 87%);
+    font-family: "Space Grotesk", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#layout {
+    width: 82rem;
+    height: 51rem;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-position: -5% 0%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    display: flex;
+}
+
+
+.card {
+    width: 25.5rem;
+    height: 14.25rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 0 hsla(278, 73%, 4%, 0.315);
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    
+}
+
+/* --------------------Card Front---------------------------- */
+
+#card-front {
+    background-image: url(./images/bg-card-front.png);
+    top: 20%;
+    left: 35%;
+    flex-direction: column;
+}
+
+#card-logo {
+    margin: 1.5rem 0 3rem 2rem;
+}
+
+#card-number {
+    color: hsla(0, 0%, 100%, 0.877);
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin: 0 0 2rem 2rem
+}
+
+#name-expiration {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card-name {
+    color: hsla(0, 0%, 100%, 0.808);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 2rem;
+}
+
+#expiration-date {
+    color: hsla(0, 0%, 100%, 0.808);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-right: 2rem;
+}
+/* ---------------------Card Back-------------------------------- */
+#card-back {
+    background-image: url(./images/bg-card-back.png);
+    background-position: 50% 0%;
+    background-size: cover;
+    position: relative;
+    top: 24%;
+    left: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#security-code {
+    color:hsla(0, 0%, 100%, 0.89);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-right: 3rem;
+    margin-bottom: .25rem;
+}
+
+/* ---------------------Form--------------------------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 15rem 0 0 22rem;
+    /* display: none; */
+}
+
+label {
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin:1.5rem 0 .5rem 0;
+
+}
+
+input {
+    height: 2.5rem;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 7px;
+    padding-left: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+input:hover, input:focus {
+    cursor: pointer;
+    border: 2px solid hsl(279, 6%, 55%);
+    outline: none;
+}
+
+#name-div, #number-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#name, #number {
+    width: 21.5rem;
+}
+
+#expiration-cvc {
+    display: flex;
+    align-items: center;
+}
+
+#expiration-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#expiration-flex {
+    display: flex;
+    align-items: center;
+}
+#cvc {
+    width: 11rem;
+}
+
+#expiration-month-flex, #expiration-year-flex, #cvc-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#expiration-month, #expiration-year {
+    width: 4.5rem;
+}
+
+#expiration-year-label {
+    position: absolute;
+    left: 99999px;
+}
+
+#expiration-year {
+    margin: 2.5rem 1.1rem 0 -3.25rem
+}
+
+
+
+::placeholder {
+    color: hsl(0, 0%, 81%);
+}
+
+.error {
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(0, 100%, 66%);
+    display: none;
+}
+/* ------------------------------confirm button----------------------------- */
+
+#confirm {
+    width: 21.5rem;
+    height: 3rem;
+    border-radius: 7px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color:hsl(0, 3%, 88%);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+}
+
+#confirm:hover {
+    background-color: hsl(278, 68%, 26%);
+    color:hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+
+
+/* --------------------------------Success-------------------------------------- */
+
+#completed {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    left: 28%;
+    align-items: center;
+}
+
+#complete-icon {
+    margin: 16rem 0 2rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+#complete-p {
+    color: hsl(279, 6%, 55%);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+#continue {
+    width: 23.5rem;
+    height: 3rem;
+    border-radius: 7px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color:hsl(0, 3%, 88%);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+#continue:hover {
+    background-color: hsl(278, 68%, 26%);
+    color:hsl(0, 0%, 100%);
+    cursor: pointer;
+}
