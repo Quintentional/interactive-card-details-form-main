@@ -197,13 +197,14 @@ input:hover, input:focus {
 
 #confirm {
     width: 21.5rem;
-    height: 3rem;
+    height: 3.5rem;
     border-radius: 7px;
     border: none;
     background-color: hsl(278, 68%, 11%);
     color:hsl(0, 3%, 88%);
-    font-size: 16px;
-    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     letter-spacing: 1px;
     margin-top: 1.5rem;
 }
@@ -247,13 +248,14 @@ h1 {
 
 #continue {
     width: 23.5rem;
-    height: 3rem;
+    height: 3.5rem;
     border-radius: 7px;
     border: none;
     background-color: hsl(278, 68%, 11%);
     color:hsl(0, 3%, 88%);
-    font-size: 16px;
-    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
     letter-spacing: 1px;
     margin-top: 1rem;
 }
@@ -262,4 +264,150 @@ h1 {
     background-color: hsl(278, 68%, 26%);
     color:hsl(0, 0%, 100%);
     cursor: pointer;
+}
+
+
+
+/* ---------------------------------------------------Mobile---------------------------------------------------------- */
+
+@media(max-width: 375px) {
+
+
+    body {
+        width: 375px;
+        min-height: 100vh;
+    }
+    
+    #layout {
+        width: 100%;
+        height: auto;
+        min-height: 44rem;
+        background-image: url(./images/bg-main-mobile.png);
+        background-position: 0% 0%;
+        border-radius: 0;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 2.75rem;
+    }
+    
+    
+    .card {
+        width: 18rem;
+        height: 9.75rem;
+        border-radius: 7px;    
+        position: absolute;
+    }
+    
+    /* --------------------Card Front---------------------------- */
+    
+    #card-front {
+        top: 18%;
+        left: 5%;
+        z-index: 1;
+    }
+    
+    #card-logo {
+        margin: .8rem 0 1.75rem .4rem;
+        scale: .65;
+    }
+    
+    #card-number {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin: 0 0 1rem 0;
+        align-self: center;
+    }
+    
+    #name-expiration {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #card-name {
+        font-size: 10px;
+        margin-left: 1.5rem;
+    }
+    
+    #expiration-date {
+        font-size: 10px;
+        margin-right: 1.5rem;
+    }
+    /* ---------------------Card Back-------------------------------- */
+    #card-back {
+        top: 0;
+        left: 18.5%;
+        margin-top: 2rem;
+    }
+    
+    #security-code {
+        font-size: 10px;
+        margin-right: 2.5rem;
+        margin-bottom: 0;
+    }
+    
+    /* ---------------------Form--------------------------------------- */
+    
+    form {
+        align-items: center;
+        margin: 8.25rem 0 0 0;
+        /* display: none; */
+    }
+    
+    label {
+        color: hsl(278, 68%, 11%);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        margin:.75rem 0 .5rem 0;
+    
+    }
+    
+    input {
+        height: 2.75rem;
+    }
+    
+    
+    #name, #number {
+        width: 20.5rem;
+    }
+    
+    #cvc {
+        width: 10rem;
+    }
+    
+    #expiration-year {
+        margin: 1.75rem .70rem 0 -3.25rem;
+    }
+    
+    .error {
+        font-size: 12px;
+        font-weight: 500;
+        color: hsl(0, 100%, 66%);
+        display: none;
+    }
+    /* ------------------------------confirm button----------------------------- */
+    
+    #confirm {
+        width: 20.5rem;
+    }
+    
+    /* --------------------------------Success-------------------------------------- */
+    
+    #completed {
+        display: none;
+        position: relative;
+        left: 0;
+      
+    }
+    
+    #complete-icon {
+        margin: 9.25rem 0 2rem;
+    }
+    
+    
+    #continue {
+        width: 20.5rem;
+        margin-top: 0;
+    }
 }
