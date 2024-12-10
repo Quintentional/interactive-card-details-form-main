@@ -24,7 +24,7 @@
         <p id="card-number">0000 0000 0000 0000</p>
         <div id="name-expiration">
           <p id="card-name">Jane Appleseed</p>
-          <p id="expiration-date">00/00</p>
+          <p id="expiration-date"><span id="month">00</span>/<span id="year">00</span></p>
         </div>
       </div>
 
@@ -34,15 +34,15 @@
     </div>
 
     <form action="#">
-      <div id="name-div">
+      <div id="name-div" class="parent">
         <label for="name" id="name-label">Cardholder Name</label>
         <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" />
         <p id="name-blank" class="blank error">Can't be blank</p>
       </div>
 
-      <div id="number-div">
+      <div id="number-div" class="parent">
         <label for="number" id="number-label">Card Number</label>
-        <input type="text" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000" />
+        <input type="text" id="number" class="digits" name="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" />
         <p id="number-blank" class="blank error">Can't be blank</p>
         <p id="number-format" class="format error">
           Wrong format, numbers only
@@ -50,30 +50,30 @@
       </div>
 
       <div id="expiration-cvc">
-        <div id="expiration-div">
+        <div id="expiration-div" class="parent">
           <div id="expiration-flex">
             <div id="expiration-month-flex">
               <label for="expiration-month" id="expiration-month-label">Exp. Date (MM/YY)</label>
-              <input type="text" id="expiration-month" name="expiration-month" placeholder="MM" />
+              <input type="text" id="expiration-month" class="digits" name="expiration-month" placeholder="MM" maxlength="2" />
             </div>
             <div id="expiration-year-flex">
               <label for="expiration-year" id="expiration-year-label">Expiration Year</label>
-              <input type="text" id="expiration-year" name="expiration-year" placeholder="YY" />
+              <input type="text" id="expiration-year" class="digits" name="expiration-year" placeholder="YY" maxlength="2"  />
             </div>
           </div>
           <div id="expiration-errors">
             <p id="expiration-blank" class="blank error">Can't be blank</p>
-            <p id="expiration-format" class="expiration error">
+            <p id="expiration-format" class="format error">
               Wrong format, numbers only
             </p>
           </div>
         </div>
 
-        <div id="cvc-flex">
+        <div id="cvc-flex" class="parent">
           <label for="cvc" id="cvc-label">CVC</label>
-          <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" />
+          <input type="text" id="cvc" class="digits" name="cvc" placeholder="e.g. 123" maxlength="3" />
           <p id="cvc-blank" class="blank error">Can't be blank</p>
-          <p id="cvc-format" class="cvc error">Wrong format, numbers only</p>
+          <p id="cvc-format" class="format error">Wrong format, numbers only</p>
         </div>
       </div>
 
